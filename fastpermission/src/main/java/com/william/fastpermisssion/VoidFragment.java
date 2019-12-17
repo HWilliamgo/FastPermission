@@ -6,9 +6,9 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 
-import androidx.core.app.ActivityCompat;
 
 import java.util.ArrayList;
 
@@ -18,8 +18,8 @@ import java.util.ArrayList;
  */
 public class VoidFragment extends Fragment {
     private static final String TAG = VoidFragment.class.getSimpleName();
-    private static final int sPERMISSION_GRANT = PackageManager.PERMISSION_GRANTED;
-    private static final int sPERMISSION_DENIED = PackageManager.PERMISSION_DENIED;
+    private static final int PERMISSION_GRANT = PackageManager.PERMISSION_GRANTED;
+    private static final int PERMISSION_DENIED = PackageManager.PERMISSION_DENIED;
 
     private static final String sBUNDLE_PERMISSIONS = "bundle_permissions";
 
@@ -81,7 +81,7 @@ public class VoidFragment extends Fragment {
 
         boolean allGrant = true;
         for (int grantResult : grantResults) {
-            if (grantResult == sPERMISSION_DENIED) {
+            if (grantResult == PERMISSION_DENIED) {
                 allGrant = false;
                 break;
             }
@@ -96,7 +96,7 @@ public class VoidFragment extends Fragment {
 
         for (int i = 0; i < grantResults.length; i++) {
             String permission = permissions[i];
-            if (grantResults[i] == sPERMISSION_DENIED) {
+            if (grantResults[i] == PERMISSION_DENIED) {
                 if (ActivityCompat.shouldShowRequestPermissionRationale(mActivity, permission)) {
                     //用户没有永远禁止权限，可以再次请求。
                     denyList.add(permission);

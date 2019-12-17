@@ -13,7 +13,7 @@ apply plugin: 'com.novoda.bintray-release'
 publish {
     userOrg = "huangwilliam33333"//组织，如果没有创建组织，就直接填写用户名。
     groupId = 'com.hwilliamgo'//group
-    artifactId = 'fastpermission-x'//module
+    artifactId = 'fastpermission-support'//module
     publishVersion = project.ext.versionName//版本
     desc = 'Android快速请求权限'//描述
     website = 'htttp://www.baidu.com'//网站，随便填

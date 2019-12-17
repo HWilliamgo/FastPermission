@@ -7,7 +7,8 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 
-import androidx.core.app.ActivityCompat;
+
+import android.support.v4.app.ActivityCompat;
 
 import java.util.ArrayList;
 
