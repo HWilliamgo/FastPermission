@@ -7,7 +7,7 @@
 implementation "com.hwilliamgo:fastpermission-x:1.0.0"
 
 //for support lib
-implementation 'com.hwilliamgo:fastpermission-support:1.0.0'
+implementation 'com.hwilliamgo:fastpermission-support:1.0.1'
 ```
 
 
